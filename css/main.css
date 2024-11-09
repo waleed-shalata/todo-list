@@ -1,0 +1,92 @@
+:root{
+    --gray:#333;
+    --green:#4bae4f;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    min-height: 100vh;
+    background-color: var(--gray);
+    padding: 10px;
+}
+.todo-list{
+    background-color: white;
+    max-width: 540px;
+    margin: 100px auto 20px ;
+    padding: 40px 30px  70px;
+    border-radius: 10px;
+}
+.todo-list .title {
+    display: flex;
+    align-items: center;
+    margin-bottom:10px ;
+}
+.todo-list .title i{
+    margin-left: 15px;
+    font-size: 20px;
+    color: var(--green);
+}
+.todo-list .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.todo-list .row input{
+    background-color: #edeef0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 80%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.todo-list .row .btn{
+    border: none;
+    background-color: var(--green);
+    padding: 12px 30px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#task-list li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 30px;
+    position: relative;
+}
+#task-list li span{
+    position: absolute;
+    font-size: 25px;
+    right: 30px;
+    top: 9px;
+    cursor: pointer;
+    text-align: center;
+}
+#task-list li::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.todo-list ul li.checked::before{
+    content: "";
+    background: url(../imgs/affirmative-156538_640.png) center/cover;
+    
+}
+.todo-list ul li.checked{
+    text-decoration: line-through;
+
+}
